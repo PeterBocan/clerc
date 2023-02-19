@@ -49,8 +49,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	// target := os.Args[1]
-	graph, err := plzExec.Graph("//testdata/simple_binary:simple_binary")
+	target := os.Args[1]
+	
+  graph, err := plzExec.Graph(target)
 	if err != nil {
 		fmt.Printf("could not read the graph for: %s", err)
 		os.Exit(1)

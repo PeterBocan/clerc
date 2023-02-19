@@ -60,7 +60,7 @@ type PleaseTarget struct {
 	Binary   bool        `json:"binary,omitempty"`
 }
 
-// Tool for name 
+// ToolForName returns the concatenated list of tools in a single string. 
 func (t *PleaseTarget) ToolForName(name string) string {
 	tools, ok := t.Tools.(map[string]interface{})
 	if !ok {
@@ -105,8 +105,6 @@ func (t *PleaseTarget) AllSources() string {
 
 	return strings.Join(strTools, " ")
 }
-
-
 
 // PleaseConfig contains the configuration for C/C++ rules.
 type PleaseConfig struct {

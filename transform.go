@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// CompileCommandEntry
+// CompileCommandEntry is a single entry of the compile_commands.json database.
 type CompileCommandEntry struct {
 	Directory string   `json:"directory"`
 	Arguments []string `json:"arguments,omitempty"`
